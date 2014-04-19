@@ -5,6 +5,10 @@
 *.suo
 *.user
 *.sln.docstates
+*Copy.config
+*Copy.*.config
+Web.Passwords.config
+
 
 # Build results
 
@@ -45,7 +49,7 @@ build/
 *.pidb
 *.log
 *.scc
-
+!lib/*.pdb
 # Visual C++ cache files
 ipch/
 *.aps

@@ -40,8 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Biggy">
-      <HintPath>..\..\biggy\Biggy\bin\Debug\Biggy.dll</HintPath>
+    <Reference Include="Biggy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Biggy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -234,9 +235,6 @@
     <Content Include="Views\Url\Index.cshtml" />
     <Content Include="Views\Url\_ShortUrlsList.cshtml" />
     <Content Include="Views\Url\_NewShortUrl.cshtml" />
-    <Content Include="Web - Copy.config">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
