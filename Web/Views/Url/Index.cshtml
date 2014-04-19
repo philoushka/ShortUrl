@@ -1,0 +1,31 @@
+﻿@using ShortUrl.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    #newUrl {
+        width:750px;
+    }
+</style>
+<div class="jumbotron">
+    <h1>Short Url</h1>
+    <p class="lead">Save your ugly, long URLs here.</p>
+    <p>        
+        @Html.Partial("_NewShortUrl")
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Your Previous URLs</h2>
+        <p>
+            @if (ViewBag.PreviousShortUrls != null)
+            {
+                foreach (ShortenedUrl item in ViewBag.PreviousShortUrls)
+                {
+                    @Html.Partial("_ShortUrlsList", item)
+                }
+            }            
+        </p>
+    </div>
+</div>

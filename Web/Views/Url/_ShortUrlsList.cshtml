@@ -1,0 +1,10 @@
+﻿@model ShortUrl.Models.ShortenedUrl
+
+<li>@Html.RouteLink(Model.TargetUrl, routeName: "redir",routeValues: new {token=Model.ShortToken }, htmlAttributes: null)
+    Visits: @Model.VisitsCount
+    <br />Created: @Model.CreatedOnUTC
+    @if (Model.CreatedBy == ViewBag.ThisUser)
+    {<br />
+        <div id="delShort" onclick="DelShort('@Model.ShortToken')">Delete This<img src="~/images/delete.png" /></div>
+    }
+</li>

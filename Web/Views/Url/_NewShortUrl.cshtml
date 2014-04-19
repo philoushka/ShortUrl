@@ -1,0 +1,39 @@
+﻿@model ShortUrl.Models.ShortenedUrl
+
+<style>
+      .wideInput {
+        width: 450px;        
+    }
+</style>
+@using (Html.BeginForm("Create", "Url", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true)
+
+      
+        <div class="form-group">
+            <div class="control-label col-md-2">URL</div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.TargetUrl, new {@class="wideInput" })
+                @Html.ValidationMessageFor(model => model.TargetUrl)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">Use Your Own Token</div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ShortToken, new {placeholder="optional" })
+                @Html.ValidationMessageFor(model => model.ShortToken)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary btn-large" />
+            </div>
+        </div>
+    </div>
+}

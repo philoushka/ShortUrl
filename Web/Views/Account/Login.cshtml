@@ -1,0 +1,12 @@
+﻿@model ShortUrl.Models.LoginViewModel
+@{
+    ViewBag.Title = "Log In With An External Account";
+}
+<h2>@ViewBag.Title.</h2>
+<div class="row">    
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
